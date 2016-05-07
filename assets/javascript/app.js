@@ -13,11 +13,35 @@ var gifName = $(this).data("name");
   
 
 		$.ajax({url: queryURL, method: 'GET'}).done(function(response) {
-	     	 $("#gifShow").text(JSON.stringify(response));
-	     	 console.log(response);
-		}); 
+	     	 // Creates a generic div to hold the gif
+			var gifDiv = $('<div class="movie">');
+
+			// Retrieves the rating
+			var rating = response.Rating;
+
+			// Creates an element to have the rating displayed
+			var pOne = $('<p>').text( "Rating: " + rating);
+
+			// Displays the rating
+			gifDiv.append(pOne);
+
+			
+
+		
+			// Creates an element to hold the mp4 
+			var image = $('<img>').attr("images/fixed_height/mp4", response.mp4);
+
+			// Appends the mp4
+			gifDiv.append(image);
+
+			
+			
+		});
 
 	}
+	
+
+	
 
 	
 
