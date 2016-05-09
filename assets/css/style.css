@@ -1,7 +1,14 @@
-
+header{
+	height:200px;
+	width:100%;
+}
 
 .workingGif{
-	 
+	 float:left;
+	 overflow:wrap;
 
+}
+p{
+	float:left;
 }
 
