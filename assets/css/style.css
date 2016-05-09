@@ -1,8 +1,32 @@
-header{
-	height:200px;
+#header{
 	width:100%;
+	background-color: black;
+	height:200px;
+	color:white;
 }
 
+#law{
+	height:200px;
+	float:right;
+}
+
+
+}
+#gifView{
+	background-color: black;
+}
+.gifButton{
+	color:navy;
+	padding:15px 30px;
+	border-color: red;
+	background-color:white;
+	font-family: 'Varela Round', sans-serif;
+}
+#gif-form{
+	font-family: 'Varela Round', sans-serif;
+	color:red;
+	background-color: black;
+}
 .workingGif{
 	 float:left;
 	 overflow:wrap;
@@ -10,5 +34,11 @@ header{
 }
 p{
 	float:left;
+	font-family: 'Varela Round', sans-serif;
+	color:red;
+	
+}
+#gifShow{
+	background-color: black;
 }
 

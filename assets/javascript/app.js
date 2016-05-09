@@ -1,4 +1,17 @@
 $(document).ready(function(){
+	// Gets Link for Theme Song
+	        var audioElement = document.createElement('audio');
+	        audioElement.setAttribute('src', 'Assets/Law and Order.mp3');
+
+			// Theme Button
+			$(".themeButton").on("click", function(){
+        		audioElement.play();
+			});
+
+			$(".pauseButton").on("click", function(){
+        		audioElement.pause();
+			});
+
 
 // Initial array of search
 	
@@ -82,7 +95,9 @@ $('#addGif').on('click', function(){
                     $('#gifShow').prepend(gifDiv);
                 }
 
+
             });
+            $('#gifShow').empty(); //replaces previous searched gif
     });
 	
 	$('#gifShow').on('click', '.workingGif', function(){
