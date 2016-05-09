@@ -60,10 +60,10 @@ $('#addGif').on('click', function(){
                 method: 'GET'
             })
             .done(function(response) {
-             console.log(response);
+             
              var results = response.data;
                 for (var i = 0; i < results.length; i++) {
-                    var gifDiv = $('<div class="item">')
+                    var gifDiv = $('<div>');
 
                     var rating = results[i].rating;
 
@@ -85,14 +85,16 @@ $('#addGif').on('click', function(){
             });
     });
 	
-	$('#gifShow').on('click', 'workingGif', function(){
-		if (state == 'still'){
-			$(this).attr('src', 'animate');
+	$('#gifShow').on('click', '.workingGif', function(){
+		var state = $(this).attr('data-state'); //gets the state of the img scource
+		
+		if ( state == 'still'){
+			$(this).attr('src', $(this).data('animate'));
 			$(this).attr('data-state', 'animate');
 		}
 		else
 		{
-			$(this).attr('src', 'still');
+			$(this).attr('src', $(this).data('still'));
 			$(this).attr('data-state', 'still');
 		}
 	});
