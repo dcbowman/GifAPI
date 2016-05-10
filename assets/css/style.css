@@ -9,11 +9,16 @@
 	height:200px;
 	float:right;
 }
-
+#main{
+	background-color: black;
+}
 
 }
 #gifView{
 	background-color: black;
+	
+	padding:0;
+	margin:0;
 }
 .gifButton{
 	color:navy;
@@ -31,14 +36,19 @@
 	 float:left;
 	 overflow:wrap;
 
+
+
 }
 p{
 	float:left;
 	font-family: 'Varela Round', sans-serif;
 	color:red;
+
 	
 }
 #gifShow{
 	background-color: black;
+	overflow:hidden;
+
 }
 
